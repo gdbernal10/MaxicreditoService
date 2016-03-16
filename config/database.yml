@@ -15,7 +15,8 @@ default: &default
   pool: 5
   username: maxcredito
   password: maxcredito
-  host: 10.1.1.100
+  #host: 10.1.1.100
+  host: ec2-52-207-253-188.compute-1.amazonaws.com
   port: 3306
 
 development:
