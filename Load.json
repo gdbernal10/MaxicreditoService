@@ -1,0 +1,151 @@
+
+*** Rates
+
+http://ec2-52-23-194-180.compute-1.amazonaws.com:3000/rates/collection/:rates
+
+[
+{"minMonths":1,"maxMonths":12,"value":25.31,"bank_code":"49","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":20.56,"bank_code":"49","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":19.31,"bank_code":"49","product_code":"CL"}, {"minMonths":60,"maxMonths":0,"value":17.19,"bank_code":"49","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":16,"bank_code":"13","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":18.31,"bank_code":"13","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":18.32,"bank_code":"13","product_code":"CL"}, {"minMonths":60,"maxMonths":0,"value":14.09,"bank_code":"13","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":12.01,"bank_code":"43","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":14.17,"bank_code":"43","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":13.5,"bank_code":"43","product_code":"CL"}, {"minMonths":60,"maxMonths":0,"value":7.9,"bank_code":"43","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":24.13,"bank_code":"30","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":24.68,"bank_code":"30","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":23.74,"bank_code":"30","product_code":"CL"}, {"minMonths":60,"maxMonths":0,"value":18.53,"bank_code":"30","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":19.34,"bank_code":"06","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":15.53,"bank_code":"06","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":13.31,"bank_code":"06","product_code":"CL"}, {"minMonths":60,"maxMonths":0,"value":13.95,"bank_code":"06","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":20.67,"bank_code":"39","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":25.85,"bank_code":"39","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":19.19,"bank_code":"39","product_code":"CL"}, {"minMonths":60,"maxMonths":0,"value":16.73,"bank_code":"39","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":27.05,"bank_code":"56","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":26.82,"bank_code":"56","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":26.24,"bank_code":"56","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":12.9,"bank_code":"12","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":24.75,"bank_code":"12","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":17.18,"bank_code":"12","product_code":"CL"}, {"minMonths":60,"maxMonths":0,"value":17.27,"bank_code":"12","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":29.52,"bank_code":"60","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":29.52,"bank_code":"60","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":28.41,"bank_code":"57","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":24.09,"bank_code":"57","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":24.62,"bank_code":"57","product_code":"CL"}, {"minMonths":60,"maxMonths":0,"value":18.79,"bank_code":"57","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":16.37,"bank_code":"02","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":14.89,"bank_code":"02","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":14.3,"bank_code":"02","product_code":"CL"}, {"minMonths":60,"maxMonths":0,"value":14.91,"bank_code":"02","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":22.69,"bank_code":"01","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":20.64,"bank_code":"01","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":21.53,"bank_code":"01","product_code":"CL"}, {"minMonths":60,"maxMonths":0,"value":18.67,"bank_code":"01","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":13.56,"bank_code":"23","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":19.82,"bank_code":"23","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":19.89,"bank_code":"23","product_code":"CL"}, {"minMonths":60,"maxMonths":0,"value":14.34,"bank_code":"23","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":22.19,"bank_code":"07","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":22.18,"bank_code":"07","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":19.36,"bank_code":"07","product_code":"CL"}, {"minMonths":60,"maxMonths":0,"value":18.47,"bank_code":"07","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":26.44,"bank_code":"62","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":26.73,"bank_code":"62","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":19.92,"bank_code":"62","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":17.17,"bank_code":"54","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":19.92,"bank_code":"54","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":25.82,"bank_code":"54","product_code":"CL"}, {"minMonths":60,"maxMonths":0,"value":18.17,"bank_code":"54","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":16.12,"bank_code":"09","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":25.91,"bank_code":"09","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":21.1,"bank_code":"09","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":29.52,"bank_code":"42","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":27.28,"bank_code":"42","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":23.75,"bank_code":"42","product_code":"CL"}, {"minMonths":60,"maxMonths":0,"value":16.86,"bank_code":"42","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":13.51,"bank_code":"55","product_code":"CL"}, {"minMonths":12,"maxMonths":36,"value":16.68,"bank_code":"55","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":16.18,"bank_code":"55","product_code":"CL"}, {"minMonths":60,"maxMonths":0,"value":18.47,"bank_code":"55","product_code":"CL"},
+{"minMonths":1,"maxMonths":12,"value":29.38,"bank_code":"53","product_code":"CL"}, {"minMonths":36,"maxMonths":60,"value":23.27,"bank_code":"53","product_code":"CL"}, {"minMonths":60,"maxMonths":0,"value":13.67,"bank_code":"53","product_code":"CL"}
+]
+
+
+*** BankProducts
+
+http://ec2-52-23-194-180.compute-1.amazonaws.com:3000/banks/bankProducts/:bankProducts
+
+[
+{"bank_code":"01","product_code":"CL"},
+{"bank_code":"02","product_code":"CL"},
+{"bank_code":"06","product_code":"CL"},
+{"bank_code":"07","product_code":"CL"},
+{"bank_code":"09","product_code":"CL"},
+{"bank_code":"12","product_code":"CL"},
+{"bank_code":"13","product_code":"CL"},
+{"bank_code":"23","product_code":"CL"},
+{"bank_code":"30","product_code":"CL"},
+{"bank_code":"39","product_code":"CL"},
+{"bank_code":"42","product_code":"CL"},
+{"bank_code":"43","product_code":"CL"},
+{"bank_code":"49","product_code":"CL"},
+{"bank_code":"53","product_code":"CL"},
+{"bank_code":"54","product_code":"CL"},
+{"bank_code":"55","product_code":"CL"},
+{"bank_code":"56","product_code":"CL"},
+{"bank_code":"57","product_code":"CL"},
+{"bank_code":"60","product_code":"CL"},
+{"bank_code":"62","product_code":"CL"}
+]
+
+
+***Product
+
+http://ec2-52-23-194-180.compute-1.amazonaws.com:3000/products
+
+{"code" : "CL","name" : "Crédito Libre Inversión","description":"","minSalary":1000000,"employee":1,"mesesemployee":3}
+
+
+
+***Banks:
+
+http://ec2-52-23-194-180.compute-1.amazonaws.com:3000/banks/collection/:banks
+
+[
+{"code" : "01","name" : "Banco de Bogotá","nit":"860002964-4"},
+{"code" : "02","name" : "Banco Popular","nit":"860007738-9"},
+{"code" : "06","name" : "Banco CorpBanca - Helm Bank","nit":"890903937-0"},
+{"code" : "07","name" : "Bancolombia","nit":"890903938-8"},
+{"code" : "09","name" : "Citibank","nit":"860051135-4"},
+{"code" : "12","name" : "Banco GNB Sudameris","nit":"860050750-1"},
+{"code" : "13","name" : "BBVA Colombia","nit":"860003020-1"},
+{"code" : "23","name" : "Banco de Occidente","nit":"890300279-4"},
+{"code" : "30","name" : "Banco Caja Social BCSC S.A.","nit":"860007335-4"},
+{"code" : "39","name" : "Davivienda","nit":"860034313-7"},
+{"code" : "42","name" : "Colpatria Red Multibanca","nit":"860034594-1"},
+{"code" : "43","name" : "Banagrario","nit":"800037800-8"},
+{"code" : "49","name" : "AV Villas","nit":"860035827-5"},
+{"code" : "51","name" : "Procredit","nit":"900200960-9"},
+{"code" : "52","name" : "Bancamía S.A.","nit":"900215071-1"},
+{"code" : "53","name" : "WWB S.A.","nit":"900378212-2"},
+{"code" : "54","name" : "Bancoomeva","nit":"900406150-5"},
+{"code" : "55","name" : "Finandina","nit":"860051894-6"},
+{"code" : "56","name" : "Banco Falabella S.A.","nit":"900047981-8"},
+{"code" : "57","name" : "Banco Pichincha S.A.","nit":"890200756-7"},
+{"code" : "58","name" : "Coopcentral","nit":"890203088-9"},
+{"code" : "59","name" : "Banco Santander","nit":"900628110-3"},
+{"code" : "60","name" : "Banco Mundo Mujer S.A.","nit":"900768933-8"},
+{"code" : "61","name" : "MULTIBANK S.A.","nit":"860024414-1"},
+{"code" : "62","name" : "BANCOMPARTIR S.A.","nit":"860025971-5"}
+]
+
+
+***SCANNERS
+
+
+**Create
+http://127.0.0.1:3000/scanners
+
+POST
+
+example 1:
+{
+	"salary" : 9000000,
+	"term" : 13,
+	"amount" : 30000000,
+	"employee" : 1,
+	"active" : 1, 
+	"tn_email" : 1,
+	"name" : "German",
+	"lastName" : "Bernal",
+	"email" : "gdbs887@gmail.com"
+}
+
+example 2:
+{
+	"salary" : 5000000,
+	"term" : 54,
+	"amount" : 50000000,
+	"employee" : 0,
+	"active" : 0, 
+	"tn_email" : 1,
+	"name" : "German2",
+	"lastName" : "Bernal2",
+	"email":"gd.bernal10@uniandes.edu.co"
+}
+
+** Get By User
+http://127.0.0.1:3000/scanners/user
+POST
+
+example 1:
+{"email":"gdbs887@gmail.com"}
+
+example 2:
+{"email":"gd.bernal10@uniandes.edu.co"}
+
+
+** get All
+http://127.0.0.1:3000/scanners
+GET
+
+
+
+
+

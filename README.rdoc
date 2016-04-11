@@ -1,3 +1,60 @@
+== MAXICREDITO API
+
+Scanner:
+
+
+=SCANNERS
+
+
+* Create a Scanner Configuration
+http://Host:port/scanners
+
+Method: POST
+
+example 1:
+{
+	"salary" : 9000000,
+	"term" : 13,
+	"amount" : 30000000,
+	"employee" : 1,
+	"active" : 1, 
+	"tn_email" : 1,
+	"name" : "test1",
+	"lastName" : "lastNameTest1",
+	"email" : "test1@gmail.com"
+}
+
+example 2:
+{
+	"salary" : 5000000,
+	"term" : 54,
+	"amount" : 50000000,
+	"employee" : 0,
+	"active" : 0, 
+	"tn_email" : 1,
+	"name" : "test2",
+	"lastName" : "lastNameTest2",
+	"email":"test2@yahoo.com"
+}
+
+* Get Scanner´s Configuration By User
+http://Host:port/scanners/user
+Method: POST
+
+example 1:
+{"email":"test1@gmail.com"}
+
+example 2:
+{"email":"test2@yahoo.com"}
+
+
+* Get All Scanner´s Configurations
+http://Host:port/scanners
+Method: GET
+
+
+
+
 == README
 
 This README would normally document whatever steps are necessary to get the

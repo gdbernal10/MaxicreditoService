@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  #get 'scanners/create'
+
+  #get 'scanners/index'
+
+  #get 'scanners/update'
+
   #Rates
   resources :rates, :defaults => { :format => 'json' }
   get 'rates/product/:code' => 'rates#index_by_product', :defaults => { :format => 'json' }
@@ -14,6 +20,11 @@ Rails.application.routes.draw do
   post 'banks/:code', to: 'banks#update_by_code', :defaults => { :format => 'json' }
   post 'banks/collection/:banks', to: 'banks#create_from_collection', :defaults => { :format => 'json' }
   post 'banks/bankProducts/:bankProducts', to: 'banks#set_bank_products', :defaults => { :format => 'json' }
+
+  #Scanner
+  resources :scanners, :defaults => { :format => 'json' }
+  post 'scanners/user/', to: 'scanners#index_by_user', :defaults => { :format => 'json' }
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

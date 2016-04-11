@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160315035842) do
+ActiveRecord::Schema.define(version: 20160411030207) do
 
   create_table "bank_products", force: :cascade do |t|
     t.datetime "created_at",           null: false
@@ -37,7 +37,10 @@ ActiveRecord::Schema.define(version: 20160315035842) do
     t.string   "code",        limit: 255
     t.string   "name",        limit: 255
     t.string   "description", limit: 255
+    t.integer  "product_id",  limit: 4
   end
+
+  add_index "products", ["product_id"], name: "index_products_on_product_id", using: :btree
 
   create_table "rates", force: :cascade do |t|
     t.datetime "created_at",                                   null: false
@@ -63,9 +66,31 @@ ActiveRecord::Schema.define(version: 20160315035842) do
 
   add_index "restrictions", ["product_id"], name: "index_restrictions_on_product_id", using: :btree
 
+  create_table "scanners", force: :cascade do |t|
+    t.integer "salary",   limit: 4
+    t.integer "term",     limit: 4
+    t.decimal "amount",             precision: 10
+    t.boolean "employee"
+    t.boolean "active"
+    t.boolean "tn_email"
+    t.integer "user_id",  limit: 4
+  end
+
+  add_index "scanners", ["user_id"], name: "index_scanners_on_user_id", using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "lastName",   limit: 255
+    t.string   "email",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
   add_foreign_key "bank_products", "banks"
   add_foreign_key "bank_products", "products"
+  add_foreign_key "products", "products"
   add_foreign_key "rates", "banks"
   add_foreign_key "rates", "products"
   add_foreign_key "restrictions", "products"
+  add_foreign_key "scanners", "users"
 end
