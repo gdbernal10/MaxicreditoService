@@ -1,17 +1,13 @@
 == MAXICREDITO API
 
-Scanner:
+===SCANNERS
 
 
-=SCANNERS
+* Create a Scanner Configuration:
 
+http://Host:port/scanners - Method: POST
 
-* Create a Scanner Configuration
-http://Host:port/scanners
-
-Method: POST
-
-example 1:
+Example 1:
 {
 	"salary" : 9000000,
 	"term" : 13,
@@ -24,7 +20,7 @@ example 1:
 	"email" : "test1@gmail.com"
 }
 
-example 2:
+Example 2:
 {
 	"salary" : 5000000,
 	"term" : 54,
@@ -37,20 +33,18 @@ example 2:
 	"email":"test2@yahoo.com"
 }
 
-* Get Scanner´s Configuration By User
-http://Host:port/scanners/user
-Method: POST
+* Get Scanner´s Configuration By User: 
 
-example 1:
-{"email":"test1@gmail.com"}
+http://Host:port/scanners/user - Method: POST
 
-example 2:
-{"email":"test2@yahoo.com"}
+Example 1: {"email":"test1@gmail.com"}
+
+Example 2: {"email":"test2@yahoo.com"}
 
 
-* Get All Scanner´s Configurations
-http://Host:port/scanners
-Method: GET
+* Get All Scanner´s Configurations: 
+
+http://Host:port/scanners - Method: GET
 
 
 
