@@ -47,6 +47,15 @@ Example 2: {"email":"test2@yahoo.com"}
 http://Host:port/scanners - Method: GET
 
 
+* Update Scanner Configuration: 
+
+http://Host:port/scanners/scanners/1  - Method: PUT
+
+Example 1: {"salary":7500000,"term":20,"amount":20000000,"employee":0,"active":0,"tn_email":1}
+
+* Delete Scanner Configuration:
+
+http://Host:port/scanners/scanners/1 - Method: DELETE
 
 
 == README

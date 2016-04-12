@@ -1,9 +1,9 @@
 class ScannersController < ApplicationController
 
-  skip_before_action :verify_authenticity_token, :only =>  [:create,:index_by_user]
+  skip_before_action :verify_authenticity_token, :only =>  [:create,:update,:destroy,:index_by_user]
 
   def index
-    puts('Inicio index')
+    puts('BEGIN INDEX')
     @Scanners = Scanner.all
     respond_to do |format|
       format.json {render json: @Scanners}
@@ -11,7 +11,7 @@ class ScannersController < ApplicationController
   end
 
   def index_by_user
-    puts('Inicio index_by_user')
+    puts('BEGIN INDEX_BY_USER')
     puts(params);
     puts(params[:email])
     params.permit!
@@ -29,17 +29,13 @@ class ScannersController < ApplicationController
   end
 
   def create
-    puts('Inicio create')
+    puts('BEGIN CREATE')
     result = false
     puts(params)
     params[:scanner].permit!
     @user = User.find_by_email(params[:email])
     if @user == nil
       @user = User.new(name:params[:name],lastName: params[:lastName],email:params[:email])
-
-      puts("Guardo Usuario")
-      puts(@user.email)
-
       if !@user.save
         respond_to do |format|
           format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -67,5 +63,45 @@ class ScannersController < ApplicationController
   end
 
   def update
+    puts("BEGIN UPDATE")
+    result = false
+    params.permit!
+    @scanner = Scanner.find(params[:id])
+    puts(@scanner)
+    if @scanner != nil
+      @scanner.update(salary: params[:salary],
+                      term: params[:term],
+                      amount: params[:amount],
+                      employee: params[:employee],
+                      active: params[:active],
+                      tn_email: params[:tn_email]
+      )
+      result = true
+    end
+    respond_to do |format|
+      if result
+        format.json { render json: "", status: :ok }
+      else
+        format.json { render json: "", status: :ok }
+      end
+    end
+  end
+
+  def destroy
+    puts("BEGIN DESTROY")
+    result = false
+    params.permit!
+    @scanner = Scanner.find(params[:id])
+    if @scanner != nil
+      @scanner.destroy
+      result = true
+    end
+    respond_to do |format|
+      if result
+        format.json { render json: "", status: :ok }
+      else
+        format.json { render json: "", status: :not_found }
+      end
+    end
   end
 end
