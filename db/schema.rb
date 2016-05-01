@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160411030207) do
+ActiveRecord::Schema.define(version: 20160501005145) do
 
   create_table "bank_products", force: :cascade do |t|
     t.datetime "created_at",           null: false
@@ -67,13 +67,14 @@ ActiveRecord::Schema.define(version: 20160411030207) do
   add_index "restrictions", ["product_id"], name: "index_restrictions_on_product_id", using: :btree
 
   create_table "scanners", force: :cascade do |t|
-    t.integer "salary",   limit: 4
-    t.integer "term",     limit: 4
-    t.decimal "amount",             precision: 10
+    t.integer "salary",        limit: 4
+    t.integer "term",          limit: 4
+    t.decimal "amount",                    precision: 10
     t.boolean "employee"
     t.boolean "active"
     t.boolean "tn_email"
-    t.integer "user_id",  limit: 4
+    t.integer "user_id",       limit: 4
+    t.string  "rates_to_scan", limit: 255
   end
 
   add_index "scanners", ["user_id"], name: "index_scanners_on_user_id", using: :btree
