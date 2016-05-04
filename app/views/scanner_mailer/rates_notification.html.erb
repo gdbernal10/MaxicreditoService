@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://s3.amazonaws.com/maxicredito/assets/css/animate.css"/>
+  <link rel="stylesheet" href="https://s3.amazonaws.com/maxicredito/assets/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="https://s3.amazonaws.com/maxicredito/assets/css/slick.css"/>
+  <link rel="stylesheet" href="https://s3.amazonaws.com/maxicredito/assets/js/rs-plugin/css/settings.css"/>
+  <link rel="stylesheet" href="https://s3.amazonaws.com/maxicredito/assets/css/styles.css"/>
+  <link href="https://s3.amazonaws.com/maxicredito/assets/js/slider/css/slider.css" rel="stylesheet" />
+  <link href="https://s3.amazonaws.com/maxicredito/assets/js/slider/css/bootstrap-slider.min.css" rel="stylesheet" />
+  <link href="https://s3.amazonaws.com/maxicredito/assets/css/popup/custombox.css" rel="stylesheet" />
+  <link href="https://s3.amazonaws.com/maxicredito/assets/css/bootstrap-select.css" rel="stylesheet" />
+  <link href="https://s3.amazonaws.com/maxicredito/assets/icheck/css/blue.css" rel="stylesheet" />
+  <link href="https://s3.amazonaws.com/maxicredito/assets/css/content/style.css" rel="stylesheet" />
+  <style>
+    .modal-demo {
+      background-color: transparent;
+      width: 800px;
+      height: 800px;
+      border: transparent none 0;
+      /*border-radius: 10px;*/
+      /*box-shadow: 0 8px 6px -6px black;*/
+      text-align: center;
+      /*display: none;*/
+    }
+
+    .title {
+      padding: 10px 20px 15px 20px;
+      line-height: 18px;
+      font-size: 18px;
+      border-bottom: #CCC solid 1px;
+    }
+
+    .text {
+      padding: 0 20px 20px 20px;
+    }
+
+
+
+    #slideIzq, #fadeIzq {
+      position: absolute;
+      background: white;
+      z-index: 99999 !important;
+      bottom: 0;
+      right: 0;
+      width: 300px;
+      cursor:pointer;
+    }
+
+    #slideIzq, #fadeIzq {
+      left: -5px;
+    }
+
+    .table-imgOferta1 {
+      width:800px;
+      height:100%;
+      /*-webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;*/
+      /*padding: 3px;*/
+      /*border: 2px solid #e5e5e5;*/
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+      text-align: center;
+      /*margin: 4px;*/
+    }
+    .div_img{
+      /*border: 2px solid #e5e5e5;*/
+      /*box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);*/
+      /*height: 100%;*/
+    }
+    .img_bank {
+      /*border: 2px solid #e5e5e5;*/
+    }
+    div{
+      width:100%;
+      text-align: center;
+    }
+    #header{
+      background-color: deepskyblue;
+      text-align: center;
+      width:800px;
+    }
+    .td{
+      /*border: 2px solid #e5e5e5;*/
+      height: 100%;
+    }
+    .td2 {
+      border: 2px solid #e5e5e5;
+      height: 100%;
+    }
+    td {
+      border: 2px solid #e5e5e5;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <p><h1>Hola<b> <%= @user.name %> </b></h1> </p>
+  <p>Te envíamos la ofertas vigentes, que se ajustan a tus preferencias</p>
+</div>
+<div id="header">
+  <img src="https://s3.amazonaws.com/maxicredito/assets/img/oferta.png"/>
+</div>
+<div id="tableResultMxc">
+  <p style="color: black; font-weight:bold;width:800px;">OFERTAS</p>
+  <% @validProducts.each do | p | %>
+  <table class="table-imgOferta1">
+    <tr>
+      <td><div class="div_img"><img alt="" class="img_bank" src="https://s3.amazonaws.com/maxicredito/Img/<%= p.code %>.png"/></div></td>
+      <td>
+        <table>
+          <tr>
+            <td class="td"><labels><b>Tasa Mensual</b></labels></td>
+          </tr>
+          <tr>
+            <!--td class="td"><labels><b>1.11</b></labels></td-->
+            <td class="td"><labels><b><%= p.monthlyRate %></b></labels></td>
+          </tr>
+        </table>
+      </td>
+      <td>
+        <table>
+          <tr>
+            <td class="td"><labels><b>Cuota Mensual</b></labels></td>
+          </tr>
+          <tr>
+            <!--td class="td"><labels><b>$89,469.96</b></labels></td-->
+            <td class="td"><labels><b><%= p.monthlyPayment %></b></labels></td>
+          </tr>
+        </table>
+      </td>
+      <td>
+        <table>
+          <tr>
+            <td class="td"><labels><b>Total del Pago</b></labels></td>
+          </tr>
+          <tr>
+            <!--td class="td"><labels><b>$1,073,639.48</b></labels></td-->
+            <td class="td"><labels><b><%= p.totalPayment %></b></labels></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+<% end %>
+</div>
+
+</body>
+</html>

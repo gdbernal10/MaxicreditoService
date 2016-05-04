@@ -1,6 +1,6 @@
 class ScannersController < ApplicationController
 
-  skip_before_action :verify_authenticity_token, :only =>  [:create,:update,:destroy,:index_by_user]
+  skip_before_action :verify_authenticity_token, :only =>  [:create,:update,:destroy,:index_by_user, :send_rates_notification_all, :send_rates_notification_by_user]
 
   def index
     puts('BEGIN INDEX')
@@ -102,6 +102,34 @@ class ScannersController < ApplicationController
       else
         format.json { render json: "", status: :not_found }
       end
+    end
+  end
+
+  def send_rates_notification_all
+    puts('BEGIN send_rates_notification_all')
+    @products = RatesController.all
+    @scanners = Scanner.all.joins(:user).where(active:1)
+    @scanners.each do | s |
+      ScannerMailer.rates_notification(s,@products).deliver
+    end
+    puts('END send_rates_notification_all')
+    respond_to do |format|
+      format.json { render json: "", status: :ok }
+    end
+  end
+
+  def send_rates_notification_by_user
+    puts('BEGIN send_rates_notification_by_user')
+    params.permit!
+    @products = RatesController.all
+    @scanners = Scanner.all.joins(:user).where("active=1 and users.email =  '" + params[:email] + "'")
+    #@scanners = Scanner.all.joins(:user).where('active=1 and user.email =' + params[:email])
+    @scanners.each do | s |
+      ScannerMailer.rates_notification(s,@products).deliver
+    end
+    puts('END send_rates_notification_by_user')
+    respond_to do |format|
+      format.json { render json: "", status: :ok }
     end
   end
 end

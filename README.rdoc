@@ -58,6 +58,16 @@ Example 1: {"salary":7500000,"term":20,"amount":20000000,"employee":0,"active":0
 http://Host:port/scanners/1 - Method: DELETE
 
 
+* Send massive notification of offers
+
+http://Host:port/scanners/rates_n/all  - Method: POST
+
+* Send notification of offers by user 
+
+http://Host:port/scanners/rates_n/user  - Method: POST
+
+Example 2: {"email":"gdbs887@gmail.com"}
+
 == README
 
 This README would normally document whatever steps are necessary to get the

@@ -4,25 +4,35 @@ class RatesController < ApplicationController
 
   def index
     puts('Inicio index')
-    @rates = Bank.all
-                 .joins(:products,:rates,:restrictions)
-                 .where('rates.product_id = products.id')
-                 .select('banks.id','banks.code','banks.name As bank')
-                 .distinct()
-                 .as_json(include: [
-                     {products: {only: [:id,:code,:name,:description]}},
-                     {rates: {only: [:minMonths,:maxMonths,:value]}},
-                     {restrictions: {only: [:minSalary,:employee,:mesesemployee]}}
-                 ])
-                 #.as_json(only: ['banks.code'])
+    @rates = RatesController.all
+                            .as_json(include: [
+                                {products: {only: [:id,:code,:name,:description]}},
+                                {rates: {only: [:minMonths,:maxMonths,:value]}},
+                                {restrictions: {only: [:minSalary,:employee,:mesesemployee]}}
+                            ])
     puts('Result')
     puts(@rates)
-    #@product =Product.find_by_code(params[:code])
     result = ({list:@rates})
     respond_to do |format|
       format.json {render json: result }
     end
 
+  end
+
+  def self.all
+    puts('BEGIN all')
+    @rates = Bank.all
+                 .joins(:products,:rates,:restrictions)
+                 .where('rates.product_id = products.id')
+                 .select('banks.id','banks.code','banks.name As bank')
+                 .distinct()
+                 #.as_json(include: [
+                 #    {products: {only: [:id,:code,:name,:description]}},
+                 #    {rates: {only: [:minMonths,:maxMonths,:value]}},
+                 #    {restrictions: {only: [:minSalary,:employee,:mesesemployee]}}
+                 #])
+    puts('END all')
+    return @rates
   end
 
   def create

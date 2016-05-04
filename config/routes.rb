@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   #Scanner
   resources :scanners, :defaults => { :format => 'json' }
   post 'scanners/user/', to: 'scanners#index_by_user', :defaults => { :format => 'json' }
+  post 'scanners/rates_n/user',to: 'scanners#send_rates_notification_by_user', :defaults => { :format => 'json' }
+  post 'scanners/rates_n/all',to: 'scanners#send_rates_notification_all', :defaults => { :format => 'json' }
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
