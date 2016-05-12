@@ -52,6 +52,8 @@ class ScannersController < ApplicationController
     )
     if @scanner.save
       result = true
+      @products = RatesController.all
+      ScannerMailer.rates_notification(@scanner,@products).deliver
     end
     respond_to do |format|
       if result

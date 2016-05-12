@@ -22,8 +22,8 @@ Rails.application.configure do
       :address => "smtp.mailgun.org",
       :port => 587,
       :domain => "maxicredito.co",
-      :user_name => "postmaster@maxicredito.co",
-      :password => "a8283e8d50032a8c1a7e750b04d20c63"
+      :user_name => "test",
+      :password => "test"
   }
 
 
